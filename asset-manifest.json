@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Customer-Research/static/css/main.6f64137d.css",
-    "main.js": "/Customer-Research/static/js/main.072787af.js",
+    "main.js": "/Customer-Research/static/js/main.fff0bf79.js",
     "static/media/흑임자.png": "/Customer-Research/static/media/흑임자.1194f4a02cdd4338d7cb.png",
     "static/media/밥알.png": "/Customer-Research/static/media/밥알.bc954bd2be83184c6f7a.png",
     "static/media/수제.png": "/Customer-Research/static/media/수제.dc521f57ec9c5a20fb36.png",
@@ -11,10 +11,10 @@
     "static/media/오메기.png": "/Customer-Research/static/media/오메기.5e4a5d91393bac9d850e.png",
     "index.html": "/Customer-Research/index.html",
     "main.6f64137d.css.map": "/Customer-Research/static/css/main.6f64137d.css.map",
-    "main.072787af.js.map": "/Customer-Research/static/js/main.072787af.js.map"
+    "main.fff0bf79.js.map": "/Customer-Research/static/js/main.fff0bf79.js.map"
   },
   "entrypoints": [
     "static/css/main.6f64137d.css",
-    "static/js/main.072787af.js"
+    "static/js/main.fff0bf79.js"
   ]
 }
