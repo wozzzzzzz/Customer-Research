@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Customer-Research/static/css/main.f855e6bc.css",
-    "main.js": "/Customer-Research/static/js/main.a931b0cb.js",
-    "static/js/453.46e59ce3.chunk.js": "/Customer-Research/static/js/453.46e59ce3.chunk.js",
-    "static/media/logo.svg": "/Customer-Research/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/Customer-Research/index.html",
-    "main.f855e6bc.css.map": "/Customer-Research/static/css/main.f855e6bc.css.map",
-    "main.a931b0cb.js.map": "/Customer-Research/static/js/main.a931b0cb.js.map",
-    "453.46e59ce3.chunk.js.map": "/Customer-Research/static/js/453.46e59ce3.chunk.js.map"
+    "main.css": "/mg_surveyPage/static/css/main.6f64137d.css",
+    "main.js": "/mg_surveyPage/static/js/main.3fd45abd.js",
+    "static/media/흑임자.png": "/mg_surveyPage/static/media/흑임자.1194f4a02cdd4338d7cb.png",
+    "static/media/밥알.png": "/mg_surveyPage/static/media/밥알.bc954bd2be83184c6f7a.png",
+    "static/media/수제.png": "/mg_surveyPage/static/media/수제.dc521f57ec9c5a20fb36.png",
+    "static/media/사과.png": "/mg_surveyPage/static/media/사과.a68f15324f5720b92c76.png",
+    "static/media/망개.png": "/mg_surveyPage/static/media/망개.662a8dbdf2e05d633197.png",
+    "static/media/굴레.png": "/mg_surveyPage/static/media/굴레.51d988528f4e91253cda.png",
+    "static/media/오메기.png": "/mg_surveyPage/static/media/오메기.5e4a5d91393bac9d850e.png",
+    "index.html": "/mg_surveyPage/index.html",
+    "main.6f64137d.css.map": "/mg_surveyPage/static/css/main.6f64137d.css.map",
+    "main.3fd45abd.js.map": "/mg_surveyPage/static/js/main.3fd45abd.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.a931b0cb.js"
+    "static/css/main.6f64137d.css",
+    "static/js/main.3fd45abd.js"
   ]
 }
