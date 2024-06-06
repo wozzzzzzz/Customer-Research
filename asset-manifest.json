@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mg_surveyPage/static/css/main.6f64137d.css",
-    "main.js": "/mg_surveyPage/static/js/main.3fd45abd.js",
-    "static/media/흑임자.png": "/mg_surveyPage/static/media/흑임자.1194f4a02cdd4338d7cb.png",
-    "static/media/밥알.png": "/mg_surveyPage/static/media/밥알.bc954bd2be83184c6f7a.png",
-    "static/media/수제.png": "/mg_surveyPage/static/media/수제.dc521f57ec9c5a20fb36.png",
-    "static/media/사과.png": "/mg_surveyPage/static/media/사과.a68f15324f5720b92c76.png",
-    "static/media/망개.png": "/mg_surveyPage/static/media/망개.662a8dbdf2e05d633197.png",
-    "static/media/굴레.png": "/mg_surveyPage/static/media/굴레.51d988528f4e91253cda.png",
-    "static/media/오메기.png": "/mg_surveyPage/static/media/오메기.5e4a5d91393bac9d850e.png",
-    "index.html": "/mg_surveyPage/index.html",
-    "main.6f64137d.css.map": "/mg_surveyPage/static/css/main.6f64137d.css.map",
-    "main.3fd45abd.js.map": "/mg_surveyPage/static/js/main.3fd45abd.js.map"
+    "main.css": "/Customer-Research/static/css/main.6f64137d.css",
+    "main.js": "/Customer-Research/static/js/main.6ad71de0.js",
+    "static/media/흑임자.png": "/Customer-Research/static/media/흑임자.1194f4a02cdd4338d7cb.png",
+    "static/media/밥알.png": "/Customer-Research/static/media/밥알.bc954bd2be83184c6f7a.png",
+    "static/media/수제.png": "/Customer-Research/static/media/수제.dc521f57ec9c5a20fb36.png",
+    "static/media/사과.png": "/Customer-Research/static/media/사과.a68f15324f5720b92c76.png",
+    "static/media/망개.png": "/Customer-Research/static/media/망개.662a8dbdf2e05d633197.png",
+    "static/media/굴레.png": "/Customer-Research/static/media/굴레.51d988528f4e91253cda.png",
+    "static/media/오메기.png": "/Customer-Research/static/media/오메기.5e4a5d91393bac9d850e.png",
+    "index.html": "/Customer-Research/index.html",
+    "main.6f64137d.css.map": "/Customer-Research/static/css/main.6f64137d.css.map",
+    "main.6ad71de0.js.map": "/Customer-Research/static/js/main.6ad71de0.js.map"
   },
   "entrypoints": [
     "static/css/main.6f64137d.css",
-    "static/js/main.3fd45abd.js"
+    "static/js/main.6ad71de0.js"
   ]
 }
