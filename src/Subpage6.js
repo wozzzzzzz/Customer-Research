@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
-import { getFirestore, collection, query, where, getDocs, updateDoc, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, collection, query, where, getDocs, doc, setDoc } from 'firebase/firestore';
 
 const Subpage6 = () => {
     const [answers, setAnswers] = useState({
