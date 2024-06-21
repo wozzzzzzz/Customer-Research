@@ -7,6 +7,7 @@ import { getFirestore, collection, query, where, getDocs, updateDoc, doc } from 
 const Subpage2 = () => {
     const [answers, setAnswers] = useState({
         NoticeRoute: '',
+        NoticeRouteOther: '',
         RecentPurchases: '',
         PurchasePurpose: '',
     });
@@ -26,18 +27,16 @@ const Subpage2 = () => {
 
     const handleChange = (name, value) => {
         setAnswers(prevAnswers => ({ ...prevAnswers, [name]: value }));
-        if (value !== '기타') {
+        if (name === 'NoticeRoute' && value !== '기타') {
             setOtherText(''); 
+        } else if (name === 'NoticeRouteOther') {
+            setOtherText(value); 
         }
     };
 
-    const handleOtherTextChange = (event) => {
-        setOtherText(event.target.value);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const user = auth.currentUser;
         if (user) {
             try {
@@ -46,14 +45,18 @@ const Subpage2 = () => {
                 if (!querySnapshot.empty) {
                     const userDoc = querySnapshot.docs[0];
                     const userDocRef = doc(db, 'users', userDoc.id);
+                    let updatedAnswers = { ...answers };
+                    if (answers.NoticeRoute === '기타') {
+                        updatedAnswers = { ...updatedAnswers, NoticeRouteOther: otherText }; // 기타 선택 시 otherText 값을 NoticeRouteOther로 업데이트
+                    }
                     await updateDoc(userDocRef, {
-                        answers
+                        answers: updatedAnswers
                     });
                     console.log('답변이 성공적으로 저장되었습니다');
                     if (answers.PurchasePurpose === '선물용') {
-                        navigate('/Subpage3'); // Navigate to Subpage3 for 선물용
+                        navigate('/Subpage3');
                     } else if (answers.PurchasePurpose === '섭취용') {
-                        navigate('/Subpage4'); // Navigate to Subpage4 for 섭취용
+                        navigate('/Subpage4');
                     }
                 } else {
                     console.error('해당 UID를 가진 사용자를 찾을 수 없습니다');
@@ -65,7 +68,6 @@ const Subpage2 = () => {
             console.error('답변을 저장할 사용자를 찾을 수 없습니다');
         }
     };
-
     const backbutton = () => {
         navigate(-1);
     };
@@ -141,7 +143,7 @@ const Subpage2 = () => {
 
     const inputStyle = {
         border: 'none',
-        borderBottom: '3px solid #7BD494', // 하단 3px 스트로크 색상 및 스타일
+        borderBottom: '3px solid #7BD494', 
         fontSize: '5vw',
         fontWeight: '600',
         width: '95%',
@@ -221,9 +223,10 @@ const Subpage2 = () => {
                             <input
                                 type="text"
                                 value={otherText}
-                                onChange={handleOtherTextChange}
+                                onChange={(e) => handleChange('NoticeRouteOther', e.target.value)}
                                 placeholder="기타 내용을 입력하세요"
                                 style={inputStyle}
+                                
                             />
                         </div>)}
                     </div>

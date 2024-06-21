@@ -16,12 +16,16 @@ const Subpage3 = () => {
     const auth = getAuth();
     const db = getFirestore();
 
+    
+
     useEffect(() => {
         const storedAnswers = JSON.parse(localStorage.getItem('answers'));
 
         if (storedAnswers) {
             setAnswers(storedAnswers);
         }
+
+        window.scrollTo(0, 0);
     }, []);
 
     const handleChange = (name, value) => {

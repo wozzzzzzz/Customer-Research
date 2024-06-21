@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInAnonymously } from 'firebase/auth';
 import styled from 'styled-components';
+import Loading from './Loading';
+import {useState} from 'react';
 
 const firebaseConfig = {
     apiKey: "AIzaSyA736xAgiNc4V1iYdvxOC8OyaYfCy0kuOI",
@@ -20,15 +22,30 @@ const auth = getAuth(app);
 
 const Main = () => {
     const navigate = useNavigate(); 
+    const [loading, setLoading] = useState(false); 
 
     const handleLogin = () => {
+        setLoading(true);
+        const minimumLoadingTime = 2000; 
+        const startTime = Date.now();
+    
         signInAnonymously(auth)
             .then(() => {
-                console.log('익명 로그인 성공');
-                navigate('/Subpage'); 
+                const elapsedTime = Date.now() - startTime;
+                const remainingTime = minimumLoadingTime - elapsedTime;
+                if (remainingTime > 0) {
+                    setTimeout(() => {
+                        console.log('익명 로그인 성공');
+                        navigate('/Subpage');
+                    }, remainingTime);
+                } else {
+                    console.log('익명 로그인 성공');
+                    navigate('/Subpage');
+                }
             })
             .catch((error) => {
                 console.error('익명 로그인 실패:', error);
+                setLoading(false);
             });
     };
     
@@ -97,6 +114,8 @@ const ButtonText = styled.span`
 
     return (
         <div>
+            {loading && <Loading loading={loading} />}
+            
             <div style={{
                 marginTop: '4vh',
                 fontSize: '11vw',
@@ -120,7 +139,7 @@ const ButtonText = styled.span`
                 display: 'flex',
                 justifyContent: 'flex-end',
                 position: 'absolute',
-                right: 0, // 요소를 오른쪽으로 붙이기 위해 추가
+                right: 0, 
                 top: '20vh',
                 zIndex: '-1'
                 }}>

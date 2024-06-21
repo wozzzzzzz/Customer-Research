@@ -7,6 +7,7 @@ import { getFirestore, collection, query, where, getDocs, doc, setDoc } from 'fi
 const Subpage6 = () => {
     const [answers, setAnswers] = useState({
         PhoneNumber: '', 
+        AdditionalFeedback: '', 
     });
     const navigate = useNavigate();
     const auth = getAuth();
@@ -168,6 +169,16 @@ const Subpage6 = () => {
                                 value={answers.PhoneNumber}
                                 onChange={(e) => handleChange('PhoneNumber', e.target.value)}
                                 placeholder="010xxxxxxxx"
+                                style={inputStyle}
+                            />
+                        </label>
+
+                        <label style={labelStyle}>
+                        망개랑에게 추가적으로 하실 말씀이 있으시면 남겨주세요
+                            <textarea
+                                value={answers.AdditionalFeedback}
+                                onChange={(e) => handleChange('AdditionalFeedback', e.target.value)}
+                                placeholder="여기에 작성해주세요"
                                 style={inputStyle}
                             />
                         </label>
